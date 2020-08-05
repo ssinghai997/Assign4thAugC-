@@ -41,20 +41,37 @@ namespace LinkedListCSharp
     {
         static void Main()
         {
-            List<int> Age = new List<int>();
-            Age.Add(23);
-            Age.Add(24);
-            Age.Add(25);
-            Age.Add(26);
-            Age.Add(27);
+            
+            List<Person> Persons = new List<Person>(); //Method I
+            Person per1 = new Person(22, "Ron", "A", "Paris");
+            Person per2 = new Person(23, "Todd", "B", "London");
+            Person per3 = new Person(24, "Ray", "C", "Michigan");
+            Person per4 = new Person(25, "Aron", "D", "NewYork");
+            Person per5 = new Person(26, "sam", "E", "Sydney");
 
-            foreach (int item in Age)
+            Persons.Add(per1);
+            Persons.Add(per2);
+            Persons.Add(per3);
+            Persons.Add(per4);
+            Persons.Add(per5);
+
+
+            var listPerson = new List<Person>   //Method II
             {
-                Console.WriteLine(item);
-            }
+                new Person(21,"David", "Paul", "Mumbai"),
+                new Person(22,"Todd", "B", "London" ),
+                new Person(24, "Ray", "C", "Michigan")
+            };
 
-            Person P1 = new Person();
-            P1.DisplayPerson();
+            foreach (Person p in Persons)
+            {
+                
+                p.DisplayPerson();
+            }
+            foreach  (Person pp in listPerson)
+            {
+                pp.DisplayPerson();
+            }
 
 
         }
